@@ -3,9 +3,13 @@
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+  color: #333;
+  letter-spacing: 0.05em;
 }
 
 body {
   position: relative;
   font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  height: 100vh;
+  overflow: hidden;
 }

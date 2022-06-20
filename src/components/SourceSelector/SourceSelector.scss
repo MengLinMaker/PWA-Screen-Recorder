@@ -1,0 +1,17 @@
+.smallBtn {
+  position: absolute;
+  top: 5rem;
+  left: 2rem;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  border-radius: 1em;
+  background-color: white;
+  box-shadow: 0 0 1.8rem silver;
+  border: none;
+  transition: 0.1s ease-in-out;
+
+  &:hover {
+    //background-color: whitesmoke;
+    transform: scale(1.025);
+  }
+}
