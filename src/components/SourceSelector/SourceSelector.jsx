@@ -1,7 +1,7 @@
 import React from 'react'
 import './SourceSelector.scss'
 
-function SourceSelector({get}) {
+function SourceSelector(props) {
   async function getVideoSources() {
     navigator.mediaDevices.getDisplayMedia({video: true})
     .then(screenStream => {

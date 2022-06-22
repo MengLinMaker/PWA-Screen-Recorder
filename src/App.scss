@@ -13,3 +13,15 @@ body {
   height: 100vh;
   overflow: hidden;
 }
+
+.colflex {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.spacer {
+  flex: auto;
+  background-color: whitesmoke;
+  color: rgb(211, 34, 46);
+}

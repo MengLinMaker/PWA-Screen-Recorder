@@ -1,0 +1,38 @@
+.stickyBottom{
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+
+.wideBtn {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  color: white;
+  border: none;
+  width: 100%;
+}
+
+.startBtn {
+  background-color: #238823;
+  transition: 0.15s ease-in-out;
+
+  &:hover {
+    background-color: #199d19;
+    box-shadow: 0 0 0.3rem #199d19aa;
+  }
+}
+
+.stopBtn {
+  background-color: #D2222D;
+  animation: stopGlow 1s ease-in-out 0s infinite alternate;
+  @keyframes stopGlow {
+    0% {background-color: #D2222D;}
+    50% {background-color: #D2222D;}
+    75% {
+      background-color: #e3444f;
+      box-shadow: 0 0 0.3rem #e3444faa;
+    }
+    100% {background-color: #D2222D;}
+  }
+}

@@ -3,37 +3,27 @@ import './VideoPlayer.scss'
 
 function VideoPlayer() {
 
-
-  async function getVideoSources() {
-    navigator.mediaDevices.getDisplayMedia({video: true})
-    .then(source => {
-    
-      streamVideo(source)
-  
-    })
+  async function getVideoSources(props) {
+    const source = await navigator.mediaDevices.getDisplayMedia({video: true})
+    streamVideo(source)
   }
-
 
   const videoRef = useRef(null)
   async function streamVideo(source) {
-    console.log(source)
-    const constraints = {
-      video: { deviceId: source.id}
-    }
-
-    const stream = await navigator.mediaDevices.getUserMedia(constraints)
     const videoElement = videoRef.current
-    videoElement.srcObject = stream
+    videoElement.srcObject = source
     videoElement.play()
   }
 
   return (
-    <video
-      id="video"
-      className="videoplayer"
-      ref={videoRef}
-      onClick={getVideoSources}
-    ></video>
+    <section className='video--frame'>
+      <video
+        id="video"
+        className="video--player"
+        ref={videoRef}
+        onClick={getVideoSources}
+      />
+    </section>
   );
 }
 
