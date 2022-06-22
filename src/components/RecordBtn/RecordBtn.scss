@@ -2,15 +2,17 @@
   position: sticky;
   bottom: 0;
   width: 100%;
+  flex: auto;
 }
 
 .wideBtn {
-  font-size: 1.2rem;
+  font-size: 1.2em;
   font-weight: bold;
-  padding: 0.5em 1em;
+  padding: 1em 1em;
   color: white;
   border: none;
   width: 100%;
+  height: 100%;
 }
 
 .startBtn {

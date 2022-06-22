@@ -1,20 +1,17 @@
 import React from 'react'
 
 import './App.scss'
-import { Navbar, RecordBtn, SourceSelector, VideoPlayer } from './components'
+import { Navbar, RecordBtn, VideoPlayer } from './components'
 
 function App() {
 
 
   return (
-    <div>
+    <div className="colflex">
       <Navbar />
-      <SourceSelector />
-      <section className="colflex">
-        <div className="" />
-        <VideoPlayer />
-        <RecordBtn />
-      </section>
+      <div className="spacer" />
+      <VideoPlayer />
+      <RecordBtn />
     </div>
   );
 }

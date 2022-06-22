@@ -1,6 +1,6 @@
 .smallBtn {
-  position: fixed;
-  top: 0.8rem;
+  position: absolute;
+  top: 25%;
   left: 2rem;
   font-weight: bold;
   padding: 0.5em 1em;
@@ -15,7 +15,7 @@
   //animation: passiveGlow 2.5s ease-in-out 0s infinite alternate;
 
   &:hover {
-    box-shadow: 0 0 0.3rem #000000aa;
-    background-color: #fafafa;
+    box-shadow: 0 0 0.3rem hsla(0, 0%, 0%, 0.533);
+    background-color: #fcfcfc;
   }
 }

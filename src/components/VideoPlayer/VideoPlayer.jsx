@@ -22,7 +22,8 @@ function VideoPlayer() {
         className="video--player"
         ref={videoRef}
         onClick={getVideoSources}
-      />
+      >hello</video>
+      <h3 className='hovertext'>Select Source</h3>
     </section>
   );
 }

@@ -5,6 +5,7 @@
   scroll-behavior: smooth;
   color: #333;
   letter-spacing: 0.05em;
+  user-select: none;
 }
 
 body {
@@ -12,16 +13,23 @@ body {
   font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   height: 100vh;
   overflow: hidden;
+
+  @media screen and (min-width: 900px), (min-height: 600px) {
+    font-size: 1.5rem;
+  }
 }
 
 .colflex {
+  position: fixed;
+  top: 0;
   display: flex;
   flex-direction: column;
   height: 100vh;
+  width: 100%;
 }
 
 .spacer {
-  flex: auto;
-  background-color: whitesmoke;
+  
+  background-color: black;
   color: rgb(211, 34, 46);
 }

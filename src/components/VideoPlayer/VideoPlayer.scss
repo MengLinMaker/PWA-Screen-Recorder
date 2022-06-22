@@ -1,5 +1,39 @@
 .video--player {
   background-color: whitesmoke;
   width: 100%;
-  color: black;
+  height: min(100%, calc(100vh - 7.7rem));
+  margin-bottom: -0.3rem;
+  transition: 0.3s ease-in-out;
+
+  @media screen and (min-width: 900px), (min-height: 600px) {
+    height: min(100%, calc(100vh - 11.5rem));
+  }
+}
+
+.video--frame {
+  position: relative;
+  z-index: -10;
+  width: 100%;
+
+  .hovertext {
+    position: fixed;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%,50%);
+    color: #00000000;
+    text-shadow: 0 0 0.1rem #00000000;
+    transition: 0.3s ease-in-out;
+  }
+
+  &:hover {
+    .video--player {
+      filter: blur(1.5px) brightness(80%);
+    }
+    .hovertext {
+      color: #ffffff;
+      text-shadow: 0 0 0.1rem #000000;
+      border: 0.08em solid;
+      padding: 1em 1em;
+    }
+  }
 }

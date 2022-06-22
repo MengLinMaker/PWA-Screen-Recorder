@@ -1,8 +1,14 @@
 .nav {
-  position: relative;
-  text-align: center;
-  padding: 1em 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: white;
   box-shadow: 0 0 1.8rem #00000040;
+  flex: auto;
+}
+
+.nav--title {
+  padding: 1em 3em;
+  text-align: center;
 }
 
