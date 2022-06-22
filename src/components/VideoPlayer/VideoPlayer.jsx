@@ -1,14 +1,22 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect } from 'react'
 import './VideoPlayer.scss'
 
-function VideoPlayer() {
+function VideoPlayer({ source, setSource}) {
 
-  async function getVideoSources(props) {
+  async function getVideoSources() {
     const source = await navigator.mediaDevices.getDisplayMedia({video: true})
+    setSource(source)
     streamVideo(source)
   }
 
-  const videoRef = useRef(null)
+  const videoRef = useRef(null);
+  useEffect(()=>
+  {const videoElement = videoRef.current
+  videoElement.srcObject = source
+  videoElement.play()
+  }, [videoRef])
+  
+
   async function streamVideo(source) {
     const videoElement = videoRef.current
     videoElement.srcObject = source

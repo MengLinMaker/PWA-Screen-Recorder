@@ -28,12 +28,17 @@
 .stopBtn {
   background-color: #D2222D;
   animation: stopGlow 1s ease-in-out 0s infinite alternate;
+  animation-timing-function: ease-in-out;
   @keyframes stopGlow {
     0% {background-color: #D2222D;}
-    50% {background-color: #D2222D;}
+    50% {
+      background-color: #D2222D;
+      transform: scale(1);
+    }
     75% {
       background-color: #e3444f;
       box-shadow: 0 0 0.3rem #e3444faa;
+      transform: scale(1.025);
     }
     100% {background-color: #D2222D;}
   }

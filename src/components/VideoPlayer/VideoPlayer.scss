@@ -1,5 +1,5 @@
 .video--player {
-  background-color: whitesmoke;
+  background-color: white;
   width: 100%;
   height: min(100%, calc(100vh - 7.7rem));
   margin-bottom: -0.3rem;
@@ -27,11 +27,11 @@
 
   &:hover {
     .video--player {
-      filter: blur(1.5px) brightness(80%);
+      filter: blur(1.5px) brightness(75%);
     }
     .hovertext {
       color: #ffffff;
-      text-shadow: 0 0 0.1rem #000000;
+      text-shadow: 0 0 0.2rem #000000;
       border: 0.08em solid;
       padding: 1em 1em;
     }

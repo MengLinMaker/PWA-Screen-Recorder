@@ -1,0 +1,72 @@
+.sourceInit {
+  height: 80%;
+  background-color: #000000cc;
+  z-index: -10;
+  position: relative;
+
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(80%);
+    transition: 1s ease-in-out;
+  }
+
+  .hovertext--container {
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
+    z-index: 0;
+    border: 0.3em solid white;
+    width: 16em;
+    height: 8em;
+    transition: 1s ease-in-out;
+    animation: morph 3s ease-in-out 0s infinite alternate;
+    animation-timing-function: ease-in-out;
+
+    &:nth-child(2) {
+      animation-delay: 2s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 5s;
+    }
+
+    @keyframes morph {
+      0%{}
+      30%{
+        width: 16em;
+        height: 8em;
+      }
+      100%{
+        border: 0.1em solid white;
+        width: 12em;
+        height: 4em;
+      }
+    }
+  }
+
+  .hovertext {
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%,50%);
+    color: #ffffff;
+    text-shadow: 0 0 0.2rem #000000;
+    transition: 1s ease-in-out;
+  }
+
+  &:hover {
+
+    img {
+      filter: brightness(50%);
+    }
+
+    .hovertext {
+      font-size: 1.5em;
+    }
+  }
+}

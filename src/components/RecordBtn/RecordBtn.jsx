@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 
 import './RecordBtn.scss'
 
-function RecordBtn({props}) {
+function RecordBtn({source}) {
   const [isRecording, setIsRecording] = useState(false)
+  console.log(source)
 
   async function startRecording() {
     setIsRecording(true)
