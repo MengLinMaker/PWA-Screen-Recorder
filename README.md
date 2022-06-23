@@ -2,13 +2,40 @@
 
 Record desktop screens with an installable web app (PWA) from the browser. Note: currently no audio is supported.
 
-### [Live demo here!](https://menglinmaker-pwa-screen-recorder.netlify.app/)
+<h3 align="center">
+  <a href="https://menglinmaker-pwa-screen-recorder.netlify.app/" target="_blank">
+  Live demo here!
+  </a>
+</h3>
 
+<div align="center">
+  <kbd>
+  <img src="https://user-images.githubusercontent.com/39476147/175262009-d399c0b1-9535-49be-89f0-b1e5db09e75b.png">
+  </kbd>
+</div>
+
+
+___
 ## Instructions:
+1. "Select Source" screen/app for recording
+2. Press "Start" to record
+3. Press "Stop" to stop and save video
+Note: file is saved as mp4
 
 
 ## Installation:
+1. [Open website on browser (perferably chrome)](https://menglinmaker-pwa-screen-recorder.netlify.app/)
+2. Click download icon on browser search bar
+3. Press "Install" to install
+Congrats, you have installed the app! :)
 
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/39476147/175260072-abbd25f4-b3ea-4717-8e02-9c035ea28b57.png" width="500px">
+</div>
 
-
-## 
+___
+## Credits
+* [WebRTC API](https://webrtc.org/)
+* [Icons from icons8](https://icons8.com/)
+  
+## Enjoy!!
