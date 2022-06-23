@@ -16,14 +16,14 @@ Record desktop screens with an installable web app (PWA) from the browser. Note:
 
 
 ___
-## Instructions:
+## Instructions
 1. "Select Source" screen/app for recording
 2. Press "Start" to record
 3. Press "Stop" to stop and save video
 Note: file is saved as mp4
 
 
-## Installation:
+## Installation
 1. [Open website on browser (perferably chrome)](https://menglinmaker-pwa-screen-recorder.netlify.app/)
 2. Click download icon on browser search bar
 3. Press "Install" to install
@@ -33,6 +33,10 @@ Congrats, you have installed the app! :)
   <img src="https://user-images.githubusercontent.com/39476147/175260072-abbd25f4-b3ea-4717-8e02-9c035ea28b57.png" width="500px">
 </div>
 
+## Issues
+* When recording is stopped and user refuses to save, the save files window is still activated. The process can be simplified by removing the need to promp a name for the file.
+* Does not prompt for permission to record screen on android phone.
+* Does not open file saver when recording is stopped on Safari.
 ___
 ## Credits
 * [WebRTC API](https://webrtc.org/)
