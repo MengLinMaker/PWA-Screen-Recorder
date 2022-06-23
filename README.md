@@ -33,11 +33,12 @@ Congrats, you have installed the app! :)
   <img src="https://user-images.githubusercontent.com/39476147/175260072-abbd25f4-b3ea-4717-8e02-9c035ea28b57.png" width="500px">
 </div>
 
+___
 ## Issues
 * When recording is stopped and user refuses to save, the save files window is still activated. The process can be simplified by removing the need to promp a name for the file.
 * Does not prompt for permission to record screen on android phone.
 * Does not open file saver when recording is stopped on Safari.
-___
+
 ## Credits
 * [WebRTC API](https://webrtc.org/)
 * [Icons from icons8](https://icons8.com/)
