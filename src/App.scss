@@ -14,8 +14,16 @@ body {
   height: 100vh;
   overflow: hidden;
 
-  @media screen and (min-width: 900px), (min-height: 600px) {
+  @media screen and (max-width: 2400px), (max-height: 1200px) {
     font-size: 1.5rem;
+  }
+
+  @media screen and (max-width: 900px), (max-height: 600px) {
+    font-size: 1rem;
+  }
+
+  @media screen and (max-width: 500px), (max-height: 400px) {
+    font-size: 0.8rem;
   }
 }
 

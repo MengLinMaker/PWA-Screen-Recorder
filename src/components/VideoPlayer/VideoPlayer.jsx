@@ -4,7 +4,15 @@ import './VideoPlayer.scss'
 function VideoPlayer({ source, setSource}) {
 
   async function getVideoSources() {
-    const source = await navigator.mediaDevices.getDisplayMedia({video: true})
+    const source = await navigator.mediaDevices.getDisplayMedia({
+      video: {
+        mandatory: {
+          maxWidth: 1920,
+          maxHeight: 1080,
+          maxFrameRate: 60,
+        },
+      },
+    });
     setSource(source)
     streamVideo(source)
   }

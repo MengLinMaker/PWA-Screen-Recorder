@@ -5,8 +5,19 @@
   margin-bottom: -0.3rem;
   transition: 0.3s ease-in-out;
 
-  @media screen and (min-width: 900px), (min-height: 600px) {
-    height: min(100%, calc(100vh - 11.5rem));
+  @media screen and (max-width: 2400px),
+  (max-height: 1200px) {
+    height: min(100%, calc(100vh - 12.7rem));
+  }
+
+  @media screen and (max-width: 900px),
+  (max-height: 600px) {
+    height: min(100%, calc(100vh - 8.4rem));
+  }
+
+  @media screen and (max-width: 500px),
+  (max-height: 400px) {
+    height: min(100%, calc(100vh - 6.7rem));
   }
 }
 
