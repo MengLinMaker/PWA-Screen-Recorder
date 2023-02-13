@@ -1,8 +1,7 @@
-import React, { useRef, useEffect } from 'react'
-import './VideoPlayer.scss'
+import React, { useRef, useEffect } from "react";
+import "./VideoPlayer.scss";
 
-function VideoPlayer({ source, setSource}) {
-
+function VideoPlayer({ source, setSource }) {
   async function getVideoSources() {
     const source = await navigator.mediaDevices.getDisplayMedia({
       video: {
@@ -13,35 +12,29 @@ function VideoPlayer({ source, setSource}) {
         },
       },
     });
-    setSource(source)
-    streamVideo(source)
+    setSource(source);
+    streamVideo(source);
   }
 
   const videoRef = useRef(null);
-  useEffect(()=>
-  {const videoElement = videoRef.current
-  videoElement.srcObject = source
-  videoElement.play()
-  }, [videoRef])
-  
+  useEffect(() => {
+    const videoElement = videoRef.current;
+    videoElement.srcObject = source;
+    videoElement.play();
+  }, [videoRef]);
 
   async function streamVideo(source) {
-    const videoElement = videoRef.current
-    videoElement.srcObject = source
-    videoElement.play()
+    const videoElement = videoRef.current;
+    videoElement.srcObject = source;
+    videoElement.play();
   }
 
   return (
-    <section className='video--frame'>
-      <video
-        id="video"
-        className="video--player"
-        ref={videoRef}
-        onClick={getVideoSources}
-      >hello</video>
-      <h3 className='hovertext'>Select Source</h3>
+    <section className="video--frame" onClick={getVideoSources}>
+      <video id="video" className="video--player" ref={videoRef} />
+      <h3 className="hovertext">Select Source</h3>
     </section>
   );
 }
 
-export default VideoPlayer
+export default VideoPlayer;
