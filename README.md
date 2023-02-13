@@ -9,10 +9,11 @@ Record desktop screens with an installable web app (PWA) from the browser. Note:
 </h3>
 
 <div align="center">
-  <kbd>
-  <img src="https://user-images.githubusercontent.com/39476147/175262009-d399c0b1-9535-49be-89f0-b1e5db09e75b.png"
-  href="https://menglinmaker-pwa-screen-recorder.netlify.app/"/>
-  </kbd>
+  <a href="https://menglinmaker-pwa-screen-recorder.netlify.app/">
+    <kbd>
+    <img src="https://user-images.githubusercontent.com/39476147/175262009-d399c0b1-9535-49be-89f0-b1e5db09e75b.png">
+    </kbd>
+  </a>
 </div>
 
 
