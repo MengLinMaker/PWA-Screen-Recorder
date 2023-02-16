@@ -19,11 +19,11 @@ function RecordBtn({ displaySource }) {
     let options = { mimeType: "video/webm;codecs=vp8" }
     const mediaRecorder = new MediaRecorder(displaySource, options)
 
+    let recordedChunks = []
     mediaRecorder.ondataavailable = function (e) {
       if (e.data.size > 0) recordedChunks.push(e.data)
     }
 
-    let recordedChunks = []
     mediaRecorder.onstop = function () {
       saveFile(recordedChunks)
       recordedChunks = []
@@ -40,26 +40,20 @@ function RecordBtn({ displaySource }) {
 
   function saveFile(recordedChunks) {
     const blob = new Blob(recordedChunks, { type: "video/webm" })
-    let fileName = window.prompt("Enter file name"),
-      downloadLink = document.createElement("a")
-    document.body.appendChild(downloadLink)
-    downloadLink.href = URL.createObjectURL(blob)
 
-    // Check if file is saved
-    if (fileName != null) {
-      // Give default name for unnamed video files
-      if (fileName == "") {
-        const dateTime = new Date()
-          .toLocaleString()
-          .replace(" ", "_")
-          .replace(",", "")
-        fileName = "Recording_" + dateTime
-      }
-      downloadLink.download = `${fileName}`
-      downloadLink.click()
-      URL.revokeObjectURL(blob) // clear from memory
-      document.body.removeChild(downloadLink)
-    }
+    const dateTime = new Date()
+      .toLocaleString()
+      .replace(" ", "_")
+      .replace(",", "")
+    const fileName = "Recording_" + dateTime
+
+    const downloadLink = document.createElement("a")
+    downloadLink.href = URL.createObjectURL(blob)
+    downloadLink.download = `${fileName}`
+    downloadLink.click()
+
+    URL.revokeObjectURL(blob)
+    downloadLink.remove()
   }
 
   return (
