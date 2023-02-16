@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react"
-import getDisplayMedia from "../getDisplayMedia"
+import { getDisplayMedia } from "../getDisplayMedia"
 import "./VideoPlayer.scss"
 
 function VideoPlayer({ source, setSource }) {

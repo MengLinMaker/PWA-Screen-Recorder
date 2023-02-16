@@ -1,14 +1,9 @@
-export default async function getDisplayMedia() {
-  const option = {
-    video: {
-      mandatory: {
-        maxWidth: 1920,
-        maxHeight: 1080,
-        maxFrameRate: 60,
-      },
-    },
-    audio: true,
-    systemAudio: "include",
-  }
+export async function getDisplayMedia() {
+  const option = { video: true }
   return await navigator.mediaDevices.getDisplayMedia(option)
+}
+
+export async function getAudioMedia() {
+  const option = { audio: true }
+  return await navigator.mediaDevices.getUserMedia(option)
 }

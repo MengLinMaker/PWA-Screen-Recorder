@@ -1,5 +1,5 @@
 import React from "react"
-import getDisplayMedia from "../getDisplayMedia"
+import { getDisplayMedia } from "../getDisplayMedia"
 import "./SourceInit.scss"
 import img from "../../assets/leaves.jpg"
 
