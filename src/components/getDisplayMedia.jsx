@@ -1,5 +1,13 @@
 export async function getDisplayMedia() {
-  const option = { video: true }
+  const option = {
+    video: {
+      mandatory: {
+        maxWidth: screen.width,
+        maxHeight: screen.height,
+        maxFrameRate: 60,
+      },
+    },
+  }
   return await navigator.mediaDevices.getDisplayMedia(option)
 }
 
