@@ -4,7 +4,7 @@
 <p align="center"> Why is screen recording so frustrating? </p>
 <p align="center"> Downloading OBS or Zoom is overkill. </p>
 <p align="center"> Too many pay as you go recorders online. </p>
-<p align="center"> Maybe all you need is a simple downloadable web-app... </h>
+<p align="center"> Please give me a simple downloadable web-app... </h>
 
 
 
