@@ -30,7 +30,7 @@ ___
 3. Press "Stop" to stop recording - or press spacebar
 4. Choose to save video and name file
 
-Note: file is saved as video/webm mime at highest possible quality on your hardware
+Note: file is saved as video/webm at highest possible quality on your hardware
 
 
 ## Installation
