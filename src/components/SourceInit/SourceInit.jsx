@@ -1,21 +1,14 @@
-import React from 'react'
-import './SourceInit.scss'
-import img from '../../assets/leaves.jpg'
+import React from "react"
+import getDisplayMedia from "../getDisplayMedia"
+import "./SourceInit.scss"
+import img from "../../assets/leaves.jpg"
 
-function SourceInit({setSource}) {
+function SourceInit({ setSource }) {
   async function getVideoSources() {
-    const source = await navigator.mediaDevices.getDisplayMedia({
-      video: {
-        mandatory: {
-          maxWidth: 1920,
-          maxHeight: 1080,
-          maxFrameRate: 60,
-        },
-      },
-    });
+    const source = await getDisplayMedia()
     setSource(source)
   }
-  
+
   return (
     <section className="sourceInit" onClick={getVideoSources}>
       <img src={img} alt="ambient dark background"></img>
@@ -24,7 +17,7 @@ function SourceInit({setSource}) {
       <div className="hovertext--container" />
       <h3 className="hovertext">Select Source</h3>
     </section>
-  );
+  )
 }
 
 export default SourceInit
