@@ -13,12 +13,10 @@ function VideoPlayer({ displaySource, setDisplaySource }) {
 
   const videoRef = useRef(null)
   useEffect(() => {
-    // Return function in useEffect executes once in React 18+
-    return () => {
-      streamVideo(displaySource)
-    }
+    streamVideo(displaySource)
   }, [videoRef])
 
+  // Attatches displaySource to video element for preview
   async function streamVideo(displaySource) {
     const videoElement = videoRef.current
     videoElement.srcObject = displaySource
