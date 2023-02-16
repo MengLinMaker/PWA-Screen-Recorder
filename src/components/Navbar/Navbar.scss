@@ -1,15 +1,39 @@
 .nav {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: white;
   box-shadow: 0 0 1em #00000040;
   flex: auto;
   font-size: 1.2em;
+  padding-bottom: 0.3em;
 }
 
 .nav--title {
-  padding: 1em 3em;
   text-align: center;
+  margin: 0.5em 3em;
 }
 
+.github-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 0.75em;
+  padding: 0.3em 0.8em;
+  filter: opacity(0.8);
+
+  transition: 0.3s;
+  border-radius: 3em;
+  box-shadow: 0px 0.05em 0em #00000000;
+  &:hover{
+    box-shadow: 0px 0.05em 0.15em #00000088;
+    filter: opacity(1);
+  }
+}
+
+.icon {
+  height: 1.6em;
+  margin-right: 0.3em;
+  margin-left: -0.4em;
+}
