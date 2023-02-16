@@ -27,7 +27,7 @@ function VideoPlayer({ source, setSource }) {
 
   return (
     <section className="video--frame" onClick={getVideoSources}>
-      <video id="video" className="video--player" ref={videoRef} />
+      <video id="video" muted className="video--player" ref={videoRef} />
       <h3 className="hovertext">Select Source</h3>
     </section>
   )
