@@ -5,8 +5,10 @@ import img from "../../assets/leaves.jpg"
 
 function SourceInit({ setSource }) {
   async function getVideoSources() {
-    const source = await getDisplayMedia()
-    setSource(source)
+    try {
+      const source = await getDisplayMedia()
+      setSource(source)
+    } catch {}
   }
 
   return (

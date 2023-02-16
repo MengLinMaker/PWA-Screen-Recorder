@@ -4,9 +4,11 @@ import "./VideoPlayer.scss"
 
 function VideoPlayer({ source, setSource }) {
   async function getVideoSources() {
-    const source = await getDisplayMedia()
-    setSource(source)
-    streamVideo(source)
+    try {
+      const source = await getDisplayMedia()
+      setSource(source)
+      streamVideo(source)
+    } catch {}
   }
 
   const videoRef = useRef(null)
