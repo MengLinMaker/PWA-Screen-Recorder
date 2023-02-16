@@ -26,9 +26,10 @@
 ___
 ## Instructions
 1. "Select Source" screen/app for recording
-2. Press "Start" to record
-3. Press "Stop" to stop and save video
-Note: file is saved as mp4
+2. Press "Start" to record - or press spacebar
+3. Press "Stop" to stop recording - or press spacebar
+4. Choose to save video and name file
+Note: file is saved as video/webm mime
 
 
 ## Installation
