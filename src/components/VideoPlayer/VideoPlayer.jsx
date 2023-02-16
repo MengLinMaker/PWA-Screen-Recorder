@@ -2,12 +2,12 @@ import React, { useRef, useEffect } from "react"
 import { getDisplayMedia } from "../getDisplayMedia"
 import "./VideoPlayer.scss"
 
-function VideoPlayer({ source, setSource }) {
+function VideoPlayer({ displaySource, setDisplaySource }) {
   async function getVideoSources() {
     try {
-      const source = await getDisplayMedia()
-      setSource(source)
-      streamVideo(source)
+      const displaySource = await getDisplayMedia()
+      setDisplaySource(displaySource)
+      streamVideo(displaySource)
     } catch {}
   }
 
@@ -15,13 +15,13 @@ function VideoPlayer({ source, setSource }) {
   useEffect(() => {
     // Return function in useEffect executes once in React 18+
     return () => {
-      streamVideo(source)
+      streamVideo(displaySource)
     }
   }, [videoRef])
 
-  async function streamVideo(source) {
+  async function streamVideo(displaySource) {
     const videoElement = videoRef.current
-    videoElement.srcObject = source
+    videoElement.srcObject = displaySource
     videoElement.play()
   }
 

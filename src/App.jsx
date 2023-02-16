@@ -4,19 +4,26 @@ import "./App.scss"
 import { Navbar, RecordBtn, VideoPlayer, SourceInit } from "./components"
 
 function App() {
-  const [source, setSource] = useState(false)
+  const [displaySource, setDisplaySource] = useState(false)
 
   const elements = (
     <>
-      <VideoPlayer source={source} setSource={setSource} />
-      <RecordBtn source={source} />
+      <VideoPlayer
+        displaySource={displaySource}
+        setDisplaySource={setDisplaySource}
+      />
+      <RecordBtn displaySource={displaySource} />
     </>
   )
 
   return (
     <div className="colflex">
       <Navbar />
-      {source ? elements : <SourceInit setSource={setSource} />}
+      {displaySource ? (
+        elements
+      ) : (
+        <SourceInit setDisplaySource={setDisplaySource} />
+      )}
     </div>
   )
 }

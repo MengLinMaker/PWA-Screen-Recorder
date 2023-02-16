@@ -3,7 +3,7 @@ import { getAudioMedia } from "../getDisplayMedia"
 
 import "./RecordBtn.scss"
 
-function RecordBtn({ source }) {
+function RecordBtn({ displaySource }) {
   const [isRecording, setIsRecording] = useState(false)
   const [mediaRecorder, setmediaRecorder] = useState(null)
 
@@ -12,13 +12,12 @@ function RecordBtn({ source }) {
 
     // Add microphone audioTrack to videoSource
     const audioSource = await getAudioMedia()
-    console.log(audioSource.getAudioTracks())
     audioSource.getAudioTracks().forEach((audioTrack) => {
-      source.addTrack(audioTrack)
+      displaySource.addTrack(audioTrack)
     })
 
     let options = { mimeType: "video/webm;codecs=vp8" }
-    const mediaRecorder = new MediaRecorder(source, options)
+    const mediaRecorder = new MediaRecorder(displaySource, options)
 
     mediaRecorder.ondataavailable = function (e) {
       if (e.data.size > 0) recordedChunks.push(e.data)
