@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { getAudioMedia } from "../getDisplayMedia"
 
 import "./RecordBtn.scss"
@@ -6,6 +6,23 @@ import "./RecordBtn.scss"
 function RecordBtn({ displaySource }) {
   const [isRecording, setIsRecording] = useState(false)
   const [mediaRecorder, setmediaRecorder] = useState(null)
+
+  useEffect(() => {
+    function spaceBarRecord(keyPress) {
+      console.log(keyPress.keyCode == 32)
+      if (keyPress.keyCode == 32) {
+        if (isRecording == false) {
+          startRecording()
+        } else {
+          stopRecording()
+        }
+      }
+    }
+    window.addEventListener("keydown", spaceBarRecord)
+    return () => {
+      window.removeEventListener("keydown", spaceBarRecord)
+    }
+  })
 
   async function startRecording() {
     setIsRecording(true)
