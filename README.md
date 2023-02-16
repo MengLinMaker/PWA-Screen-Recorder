@@ -10,7 +10,7 @@
 
 <h3 align="center">
   <a href="https://menglinmaker-pwa-screen-recorder.netlify.app/" target="_blank">
-  Live demo here!
+  👉 Live demo here! 👈
   </a>
 </h3>
 
