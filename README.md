@@ -29,6 +29,7 @@ ___
 2. Press "Start" to record - or press spacebar
 3. Press "Stop" to stop recording - or press spacebar
 4. Choose to save video and name file
+
 Note: file is saved as video/webm mime
 
 
@@ -36,6 +37,7 @@ Note: file is saved as video/webm mime
 1. [Open website on browser (perferably chrome)](https://menglinmaker-pwa-screen-recorder.netlify.app/)
 2. Click download icon on browser search bar
 3. Press "Install" to install
+
 Congrats, you have installed the app! :)
 
 <div align="center">
