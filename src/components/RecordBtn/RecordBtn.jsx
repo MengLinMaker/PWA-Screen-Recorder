@@ -1,44 +1,50 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
+import { getAudioMedia } from "../getDisplayMedia"
 
-import "./RecordBtn.scss";
+import "./RecordBtn.scss"
 
 function RecordBtn({ source }) {
-  const [isRecording, setIsRecording] = useState(false);
-  const [mediaRecorder, setmediaRecorder] = useState(null);
+  const [isRecording, setIsRecording] = useState(false)
+  const [mediaRecorder, setmediaRecorder] = useState(null)
 
   async function startRecording() {
-    setIsRecording(true);
-    let options = {
-      audioBitsPerSecond: 128000,
-      videoBitsPerSecond: 8000000,
-      mimeType: "video/webm; codecs=vp9,opus",
-    };
+    setIsRecording(true)
 
-    let recordedChunks = [];
-    const mediaRecorder = new MediaRecorder(source, options);
+    // Add microphone audioTrack to videoSource
+    const audioSource = await getAudioMedia()
+    console.log(audioSource.getAudioTracks())
+    audioSource.getAudioTracks().forEach((audioTrack) => {
+      source.addTrack(audioTrack)
+    })
+
+    let options = { mimeType: "video/webm;codecs=vp8" }
+    const mediaRecorder = new MediaRecorder(source, options)
 
     mediaRecorder.ondataavailable = function (e) {
-      if (e.data.size > 0) recordedChunks.push(e.data);
-    };
+      if (e.data.size > 0) recordedChunks.push(e.data)
+    }
+
+    let recordedChunks = []
     mediaRecorder.onstop = function () {
-      saveFile(recordedChunks);
-      recordedChunks = [];
-    };
-    mediaRecorder.start();
-    setmediaRecorder(mediaRecorder);
+      saveFile(recordedChunks)
+      recordedChunks = []
+    }
+
+    mediaRecorder.start()
+    setmediaRecorder(mediaRecorder)
   }
 
   async function stopRecording() {
-    setIsRecording(false);
-    mediaRecorder.stop();
+    setIsRecording(false)
+    mediaRecorder.stop()
   }
 
   function saveFile(recordedChunks) {
-    const blob = new Blob(recordedChunks, { type: "video/webm" });
+    const blob = new Blob(recordedChunks, { type: "video/webm" })
     let fileName = window.prompt("Enter file name"),
-      downloadLink = document.createElement("a");
-    document.body.appendChild(downloadLink);
-    downloadLink.href = URL.createObjectURL(blob);
+      downloadLink = document.createElement("a")
+    document.body.appendChild(downloadLink)
+    downloadLink.href = URL.createObjectURL(blob)
 
     // Check if file is saved
     if (fileName != null) {
@@ -47,13 +53,13 @@ function RecordBtn({ source }) {
         const dateTime = new Date()
           .toLocaleString()
           .replace(" ", "_")
-          .replace(",", "");
-        fileName = "Recording_" + dateTime;
+          .replace(",", "")
+        fileName = "Recording_" + dateTime
       }
-      downloadLink.download = `${fileName}`;
-      downloadLink.click();
-      URL.revokeObjectURL(blob); // clear from memory
-      document.body.removeChild(downloadLink);
+      downloadLink.download = `${fileName}`
+      downloadLink.click()
+      URL.revokeObjectURL(blob) // clear from memory
+      document.body.removeChild(downloadLink)
     }
   }
 
@@ -69,7 +75,7 @@ function RecordBtn({ source }) {
         </button>
       )}
     </div>
-  );
+  )
 }
 
-export default RecordBtn;
+export default RecordBtn
