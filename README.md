@@ -1,9 +1,9 @@
 
-<h1 align="center"> PWA Screen Recorder </h1>
+<h1 align="center"> Downloadable Web-App Screen Recorder </h1>
 
 <p align="center"> Why is screen recording so frustrating? </p>
-<p align="center"> Downloading OBS or Zoom is overkill. </p>
-<p align="center"> Too many pay as you go recorders online. </p>
+<p align="center"> 1. Downloading OBS or Zoom is overkill. </p>
+<p align="center"> 2. Too many pay as you go recorders online. </p>
 <p align="center"> Please give me a simple downloadable web-app... </h>
 
 
