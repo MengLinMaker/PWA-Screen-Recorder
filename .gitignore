@@ -105,3 +105,6 @@ dist
 
 # VScode
 .vscode
+
+# Build folder
+dist
