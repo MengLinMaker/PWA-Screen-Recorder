@@ -1,10 +1,16 @@
-# PWA Screen Recorder
 
-Record desktop screens with an installable web app (PWA) from the browser. Note: currently no audio is supported.
+<h1 align="center"> Downloadable Web-App Screen Recorder </h1>
+
+<p align="center"> Why is screen recording so frustrating? </p>
+<p align="center"> 1. Downloading OBS or Zoom is overkill. </p>
+<p align="center"> 2. Too many pay as you go recorders online. </p>
+<p align="center"> Please give me a simple downloadable web-app... </h>
+
+
 
 <h3 align="center">
   <a href="https://menglinmaker-pwa-screen-recorder.netlify.app/" target="_blank">
-  Live demo here!
+  👉 Live demo here! 👈
   </a>
 </h3>
 
@@ -37,7 +43,6 @@ Congrats, you have installed the app! :)
 
 ___
 ## Issues
-* When recording is stopped and user refuses to save, the save files window is still activated. The process can be simplified by removing the need to promp a name for the file.
 * Does not prompt for permission to record screen on android phone.
 * Does not open file saver when recording is stopped on Safari.
 
