@@ -43,7 +43,6 @@ Congrats, you have installed the app! :)
 
 ___
 ## Issues
-* When recording is stopped and user refuses to save, the save files window is still activated. The process can be simplified by removing the need to promp a name for the file.
 * Does not prompt for permission to record screen on android phone.
 * Does not open file saver when recording is stopped on Safari.
 
